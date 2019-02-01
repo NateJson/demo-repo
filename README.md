@@ -9,3 +9,7 @@ pivotal tracker branch readme
 ## license
 
 the project is licensed by MIT License.
+
+## technologies used
+
++html
