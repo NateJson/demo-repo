@@ -15,6 +15,6 @@ pr:
 steps:
   - task: DotNetCoreInstaller@0
     inputs:
-      version: '2.1.300'
+      version: '2.2.103'
   - script: 'dotnet restore ./Demo.MVC/Demo.MVC.sln'
   - script: 'dotnet build ./Demo.MVC/Demo.MVC.sln'
