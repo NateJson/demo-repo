@@ -3,15 +3,15 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
-
 pool:
   vmImage: 'Ubuntu-16.04'
 
+trigger:
+  - master
+
+pr:
+  - 'azure-pipelines'
+
 steps:
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
-    includeRootFolder: false
-- task: PublishBuildArtifacts@1
+- script: 'dotnet restore ./demo-repo/Demo.MVC.sln'
+- script: 'dotnet build ./demo-repo/Demo.MVC.sln'
